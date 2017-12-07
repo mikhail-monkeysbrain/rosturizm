@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic');
+@import helpers
+@import variables
+
+*
+	margin 0
+	padding 0
+	box-sizing border-box
+	
+body
+	font-family Roboto
+
+
+header
+	background #fff
+	box-shadow 0 5px 15px -10px #000
+	min-height 74px
+
+.navbar
+	&__column
+		flex-direction column
+		align-items flex-start 
+		&--top
+			width 100%
+			display -webkit-flex
+			display -moz-flex
+			display -ms-flex
+			display -o-flex
+			display flex
+			align-items center
+			justify-content space-between
+			li
+				&:nth-child(3)
+					margin 0 8px
+
+.logo
+	display -webkit-flex
+	display -moz-flex
+	display -ms-flex
+	display -o-flex
+	display flex
+	align-items center
+	flex-grow 1
+	&--image
+		&--item
+			min-width 60px
+
+.font__logo
+	margin 0 16px
+	font-weight 700
+	text-transform uppercase
+	color #3586c4
+	font-size 36px
+	line-height 33px
+	position relative
+	small
+		display block
+		color #595959
+		font-size 17px
+		
+.query
+	&__search
+		border 1px solid #b9b9b9
+		border-radius 22px
+		width 182px
+		height 43px
+		padding 14px 26px
+		position relative
+		&--button
+			background: #d6d6d6 url(../img/search.svg) center no-repeat
+			padding 14px
+			width 62px
+			cursor pointer
+	&__comment
+		border 1px solid #b9b9b9
+		border-radius 22px
+		width 62px
+		height 43px
+		padding 14px 0
+		background: url(../img/comment.svg) center no-repeat
+		cursor pointer
+		
+.complete
+	display none
+	+media(960px)
+		display block
+		
+.nav__main
+	position relative
+	left 85px
+	
+.nav-link
+	color #58a5e0
+	font-size 21px
+	font-weight 700
