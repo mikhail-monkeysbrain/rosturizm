@@ -8,15 +8,14 @@ include blocks/head
 							img.logo--image--item(src="img/logo__fixed.svg", alt="logo")
 						p.font__logo
 							small открытые данные
-							| Ростуризма 
-					li
-						form.form-search
-							input.input-medium.query__search(type='text' placeholder="russiatourism.ru")
-					li.query__comment
-					li.query__search.query__search--button
-				button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarsExampleDefault', aria-controls='navbarsExampleDefault', aria-expanded='false', aria-label='Toggle navigation')
-					span.navbar-toggler-icon
-				.collapse.navbar-collapse.nav__main
+							| Ростуризма
+					li.nav--forms
+						.form-search
+							form
+								input.input-medium.query__search(type='text' placeholder="russiatourism.ru")
+						.query__comment
+						.query__search.query__search--button
+				.nav__main
 					- var x = 6;
 					- var items = ['Наборы данных ', 'Карта данных ', 'Новости','Статистика','Опросы','Помощь']
 					ul.navbar-nav.mr-auto
@@ -24,10 +23,9 @@ include blocks/head
 							li.nav-item
 								a.nav-link(href="#")= items[i]
 						-	}
-						li.nav-item.dropdown.complete
-							a#dropdown01.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Dropdown
-							.dropdown-menu(aria-labelledby='dropdown01')
-								a.dropdown-item(href='#')
+					.nav-item__dropdown.dropdown.complete
+						a#dropdown01.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Еще
+						.dropdown-menu(aria-labelledby='dropdown01')
 		main.container(role='main')
 			- var x = 60;
 				- for (var i=0; i<x; i++) {
